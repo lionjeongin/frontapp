@@ -45,6 +45,14 @@ img {
 .montserrat {
     font-family: "Montserrat", sans-serif;
 }
+
+h3 {
+    font-size: 1.538rem;
+    color: #212121;
+    text-align: center;
+    line-height: 1;
+    padding: 20px;
+}
 /* 공통 스타일 E */
 
 /* 헤더 영역 S */
@@ -89,6 +97,7 @@ header nav a {
 /* 메인 배너 영역 S */
 .main-banner img {
     width: 100%;
+    display: block;
 }
 /* 메인 배너 영역 E */
 
@@ -96,6 +105,9 @@ header nav a {
 .sub-menus{
     display: flex;
     flex-wrap: wrap;
+    border: 10px solid #ededed;
+    border-left: 0;
+    border-right: 0;
 }
 
 .sub-menus a {
@@ -103,5 +115,239 @@ header nav a {
     text-align: center;
     height: 50px;
     line-height: 50px;
+    font-weight: 500;
+    font-size: 1.077rem;
+    border-top : 1px solid #ededed;
+    border-left: 1px solid #ededed;
+}
+
+.sub-menus a:nth-of-type(1),
+.sub-menus a:nth-of-type(2),
+.sub-menus a:nth-of-type(3) {
+    border-top: 0;  /* 에어간판~개인결제 부분 위에서 1,2,3 줄 없애기 */
+}
+
+.sub-menus a:nth-of-type(3n+1){
+    border-left: 0;  /* 에어간판~개인결제 부분 왼쪽 1, 4, 7 줄 없애기 */
 }
 /* 서브 메뉴 영역 E */
+
+/* 서브 배너 영역 S */
+.sub-banner {
+    display: flex;
+    flex-wrap: wrap;  /* 다음칸 줄개행 */
+    margin-bottom: 20px;  /* 하단쪽 여백 20px 만큼 주기 */
+}
+
+.sub-banner a:nth-of-type(1) {
+    width: 100%;    /* 첫번째 배너(현수막 주문 제작) 가로 길이 100% 꽉 맞게 */
+}
+
+.sub-banner a:nth-of-type(2),
+.sub-banner a:nth-of-type(3) {
+    width: 50%;  /* 두번째 세번째(등신대, 레터링 스티커) 배너는 가로 반반씩 채워지게! */
+}
+
+.sub-banner img {
+    width: 100%;
+    display: block;  /* 이미지 여백 제거하기(첫번째와 그 밑에 두세번째 사이에 여백 지우기 */
+}
+/* 서브 배너 영역 E */
+
+/* 상품 목록 영역 S */
+.products ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 15px; 
+}
+
+.products li {
+    width: calc(100% / 2 - 8px); /* 연산자 사이 사이 띄어쓰기 해야 계산된다! */
+    margin-bottom: 30px;
+}
+
+.products li:nth-of-type(2n) {
+    margin-left: 16px;
+}
+
+.products .product-image img {
+    width: 100%;  /* 꽉 채워지게 */
+    display: block; /* 하단 여백 제거 */
+    border-radius: 10px;
+}
+
+.products .product-image {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.products .product-price {
+    font-size: 1.154rem;
+}
+
+.products .product-price .price {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -1px; /* 글자와 글자 사이 간격 줄이기 */
+}
+
+.products .product-name {
+    color: #3e3d3c;
+    font-size: 1.154rem;
+    word-break: break-all;
+}
+
+.products .stars img {
+    height: 11px;
+}
+
+.products .no-of-review {
+    color: #a7a7a7;
+    margin-left: 6px;
+    font-size: 0.923rem;
+}
+
+.products .review-rate {
+    margin: 10px 0 2px;
+}
+
+.products .more-button {
+    font-size: 1.154rem;
+    color: #666;
+    border: 1px solid #b1b1b1;
+    font-weight: bold;
+    background: #fff;
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+/* 상품 목록 영역 E */
+
+/* 하단 배너 영역 */
+.bottom-banner {
+    width: 100%;
+    display: block;
+    margin: 10px 0 20px;
+}
+
+/* 푸터 영역 S */
+footer {
+    background: #f9f9f9;
+    padding: 25px 0 80px;
+    margin-top: 25px;
+}
+
+footer .logo img {
+    width: 79px;
+    margin: 0 auto 12px;
+    display: block;   /*정가운데에 로고 배치*/
+}
+
+footer .center-phone {
+    border: 2px solid #2a2a2a;
+    border-radius: 20px;
+    height: 35px;
+    line-height: 31px;
+    width: 190px;
+    display: block;
+    margin: 0 auto 7px;
+    font-size: 1.538rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+footer .center-phone img {
+    height: 16px;
+    vertical-align: middle;
+}
+
+footer .bank-info {
+    font-size: 0.923rem;
+    color: #2a2a2a;
+    text-align: center;
+}
+
+footer .bank-info span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+footer .company-info {
+    text-align: center;
+    margin-bottom: 3px 0 8px;
+    font-size: 0.923rem;
+    font-weight: 600;
+    color: #878787;
+}
+
+footer .company-info img {
+    width: 15px;
+    vertical-align: middle;
+}
+
+footer .links {
+    text-align: center;
+}
+
+footer .links a {
+    font-size: 0.846rem;
+    padding: 0 11px;
+    color: #878787;
+    position: relative;
+}
+
+footer .links a:not(.last)::after {  /* last만 제외하고 after 넣기/ not(.last)-> (PC버전 뒤에 바 제거) */
+    content: '';
+    display: block;
+    width: 1px;
+    height: 8px;
+    background: #878787;
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+/* 푸터 영역 E */
+
+/* 하단 고정 메뉴 S */
+.bottom-quick-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border-top: 1px solid #dfe1e5;
+    z-index: 10;
+    padding: 9px 15px;
+}
+
+.bottom-quick-menu button {
+    width: 26px;
+    height: 30px;
+}
+
+.bottom-quick-menu .links {
+    display: flex;
+}
+
+.bottom-quick-menu .links a {
+    flex-grow: 1;
+    width: 0;
+}
+
+
+.bottom-quick-links {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    z-index: 10;
+}
+
+.bottom-quick-links img {
+    display: block;
+    width: 50px;
+    margin-top: 10px;
+}
+/* 하단 고정 메뉴 E */
+
